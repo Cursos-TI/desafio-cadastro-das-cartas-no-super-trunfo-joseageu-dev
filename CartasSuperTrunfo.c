@@ -16,6 +16,8 @@ int main() {
     float area1;
     float pib1;
     int pontosturisticos1;
+    float densidadepopulacional1;
+    float pibpercapita1;
 
     //Definição das variáveis da Carta 2
     char estado2[50];
@@ -25,6 +27,8 @@ int main() {
     float area2;
     float pib2;
     int pontosturisticos2;
+    float densidadepopulacional2;
+    float pibpercapita2;
 
     // Título da aplicação
     printf("*** Desafio Cadastro das Cartas no Super Trunfo *** \n\n");
@@ -53,6 +57,10 @@ int main() {
     printf("Digite a quantidade de pontos turísticos da cidade: ");
     scanf("%d", &pontosturisticos1);
 
+    //cálculo da Densidade Populacional e do PIB Per Capita da carta 1
+    densidadepopulacional1 = (float) populacao1 / area1;
+    pibpercapita1 = (float) (pib1 * 1000000000) / populacao1;
+
     // Cadastro da Carta 2
     printf("\n");
     printf("CADASTRE AS INFORMAÇOES DA CARTA 2 \n");
@@ -78,6 +86,10 @@ int main() {
     printf("Digite a quantidade de pontos turísticos da cidade: ");
     scanf("%d", &pontosturisticos2);
     
+    //cálculo da Densidade Populacional e do PIB Per Capita da carta 2
+    densidadepopulacional2 = (float) populacao2 / area2;
+    pibpercapita2 = (float) (pib2 * 1000000000) / populacao2;
+
     // Exibição dos Dados das Cartas:
     printf("\n");
     printf("CARTAS CADASTRADAS: \n");
@@ -92,6 +104,8 @@ int main() {
     printf("Área: %.2f km² \n", area1);
     printf("PIB: %.2f bilhões de reais \n", pib1);
     printf("Número de Pontos Túrísticos: %d \n", pontosturisticos1);
+    printf("Densidade Populacional: %.2f hab/km² \n", densidadepopulacional1);
+    printf("PIB per Capita: %.2f Reais", pibpercapita1);
 
     // Exibição dos Dados da da Carta 2:
     printf("\n");
@@ -103,6 +117,8 @@ int main() {
     printf("Área: %.2f km² \n", area2);
     printf("PIB: %.2f bilhões de reais \n", pib2);
     printf("Número de Pontos Túrísticos: %d \n", pontosturisticos2);
+    printf("Densidade Populacional: %.2f hab/km² \n", densidadepopulacional2);
+    printf("PIB per Capita: %.2f Reais", pibpercapita2);    
 
     return 0;
 }
